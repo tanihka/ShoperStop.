@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navContainer {
+    border-bottom: 2px solid whitesmoke;
+}
+
+.ProductsPage,
+.CartPage,
+.ProductDetailPage {
+    padding-top: 40px;
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+}
+
+.ProductsPage {
+    padding-top: 30px;
+}
+
+.navbar {
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #202042;
+}
+
+.logo {
+    margin-right: 40px;
+}
+
+.navMenuWrap {
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.navMenuWrap a{
+    color: #202042;
+}
+
+.HammBurger {
+    display: none;
+    background-color: transparent;
+    color: #202042;
+    border: none;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.navMenu {
+    max-width: 300px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMenu li {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navMenu .active {
+    /* color: #FF3F6C; */
+    color: #634ACD;
+}
+
+.navMenuWrap .cart {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.login-icon {
+    position: relative;
+    top: 4px;
+    font-size: 20px;
+
+
+}
+
+.cart-icon {
+    position: relative;
+    top: 4px;
+    z-index: 1;
+    font-size: 22px;
+}
+
+
+.cartNum {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: #634ACD;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.mobileNavWrapper {
+    display: none;
+}
+
+
+
+.TopProducts,
+.ProductList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 4fr));
+    grid-gap: 1.5rem;
+}
+
+.CardDiv {
+    border: 1px solid #20204227;
+    border-radius: 4px;
+    padding: 14px;
+    background-color: #fff;
+    height: auto !important;
+}
+
+.CardDiv .image {
+    margin: auto;
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.CardDiv .image img {
+    max-height: 180px;
+    width: 100%;
+    height: 100%;
+}
+
+.CardDiv .content .title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-price h3 {
+    font-size: 14px;
+    line-height: 26px;
+
+}
+
+.content p {
+    font-size: 12px;
+    color: rgb(104, 104, 104);
+    margin-bottom: 14px;
+}
+
+.CardDiv .content .addToCartBtn {
+    background-color: #FF3F6C;
+    /* background-color: #202042; */
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.cartCard {
+    display: flex;
+    padding: 20px 12px;
+    border: 2px solid #e8e8e8;
+    margin-bottom: 20px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.cartCard img {
+    width: 60px;
+    margin-right: 20px;
+}
+
+
+/* decrement , increment and remove item buttons style */
+.bottomBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomBtns .quantityBtn {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.bottomBtns p,
+.bottomBtns button {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(93, 93, 93);
+
+}
+
+.bottomBtns button {
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid rgb(93, 93, 93);
+}
+
+.bottomBtns .deleteBtn {
+    border-color: #FF3F6C;
+    color: #FF3F6C;
+    background-color: #ff3f6c28;
+}
+
+
+
+/* CSS for Login and Sigup Pages */
+.LoginPage {
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+
+  }
+
+  /* .center-login {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  } */
+  
+  .login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .btn-login {
+    background-color: #634ACD;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .btn-login:hover {
+    background-color: #5238A0;
+  }
+  
+  .error-message,
+  .success-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .signup-link {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .signup-link a {
+    color: #634ACD;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+/* end of login css */
+
+/* signup form css */
+
+.signup-container {
+    max-width: 325px;
+    margin-top: 50px;
+  }
+  
+/* signup cssEnd */
+
+
+.ProductDetailPage {
+    display: flex;
+}
+
+.ProductDetailPage .imagee {
+    max-width: 500px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+}
+
+.ProductDetailPage .imagee img {
+    max-width: 500px;
+    max-height: 400px;
+    height: 100%;
+}
+
+.CategoryFilter {
+    text-align: center;
+    padding: 30px 0 20px 0;
+    margin: auto;
+}
+
+.SearchBar {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    column-gap: 30px;
+    border: 2px solid whitesmoke;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.SearchBar input {
+    max-width: 600px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.SearchBar .searchIcon {
+    font-size: 24px;
+    color: rgb(115, 115, 115);
+}
+
+
+
+/* Hero Section CSS */
+.Hero {
+    max-width: 1050px;
+    width: 94%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 40px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.Hero .HeroText {
+    max-width: 450px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.Hero .HeroText h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.Hero .HeroText p {
+    margin-bottom: 30px;
+}
+
+
+.Hero .HeroText button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: #FF3F6C;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.Hero .HeroText button .exploreArrow{
+    margin-left: 6px;
+    margin-bottom: -2px;
+}
+
+.Hero .HeroImage {
+    padding-top: 20px;
+    max-width: 500px;
+    width: 100%;
+
+
+}
+
+.Hero .HeroImage img {
+    max-width: 500px;
+    width: 100%;
+
+}
+
+/* ======================== */
+.TopProductsWrapper {
+    padding-top: 40px;
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+}
+
+.TopProductsWrapper h2 {
+    margin-bottom: 14px;
+}
+
+.showMoreBtnWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 0;
+    cursor: pointer;
+
+}
+
+.showMoreBtn {
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+    color: #202042;
+}
+
+.showMoreBtnIcon {
+    color: #FF3F6C;
+}
+
+/* ============================ */
+.Offer {
+    max-width: 1050px;
+    width: 94%;
+    border-radius: 8px;
+    display: grid;
+    background-color: #FF3F6C;
+    color: white;
+    grid-template-columns: auto auto;
+    margin: auto;
+    column-gap: 40px;
+}
+
+.Offer .offerImage,
+.Offer .offerText {
+    max-width: 500px;
+    width: 100%;
+    padding: 0;
+}
+
+.Offer .offerImage img {
+    max-width: 500px;
+    width: 100%;
+    padding: 0;
+    max-height: 260px;
+    height: 100%;
+}
+
+.WhyUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    background-color: #fffcfd;
+}
+
+/* ============== footer style =============== */
+.FooterWrap {
+    padding: 20px 0 0 0;
+    background-color: #fffafa;
+}
+
+.Footer {
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    display: grid;
+    margin-bottom: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
+}
+
+.bottomFooter {
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bottomFooter hr {
+    border: none;
+    border-top: 2px solid rgb(88, 88, 88);
+    margin-bottom: 10px;
+}
+
+.bottomFooter p {
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+}
+
+.scroll-lock {
+    overflow: hidden;
+  }
+  
+
+@media screen and (max-width: 768px) {
+    .Hero {
+        grid-template-columns: auto;
+
+    }
+
+    .Hero .HeroImage {
+        margin: auto;
+    }
+
+    .Hero .HeroText {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navMenu {
+        display: none;
+    }
+
+    .navMenuWrap {
+        max-width: auto;
+        width: auto;
+    }
+
+    .HammBurger {
+        display: block;
+    }
+
+    .mobileNavWrapper {
+        display: none;
+    }
+
+    .mobileNavWrapper li a {
+        color: white;
+    }
+
+    .close {
+        position: absolute;
+        right: 30px;
+        color: white;
+        top: 10px;
+
+    }
+
+    .mobileNavWrapper.active {
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        display: block;
+        position: absolute;
+        background-color: #202042;
+        color: white;
+        width: 100%;
+        z-index: 999;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .MobileNavMenu {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .MobileNavMenu li {
+        margin-bottom: 20px;
+    }
+}
