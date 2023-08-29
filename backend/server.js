@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
 
-mongoose.connect('mongodb://localhost:27017/test', {
+mongoose.connect('mongodb+srv://taanishkag078:12341234@cluster0.gk4jt8y.mongodb.net/', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

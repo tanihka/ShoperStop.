@@ -19,6 +19,7 @@ const UserProvider = ({ children }) => {
   // Function to handle user login
   const login = async (email, password) => {
     try {
+      // const response = await axios.post('https://shoperstop.onrender.com/auth/signin', { email, password });
       const response = await axios.post('http://localhost:5555/auth/signin', { email, password });
       const token = response.data.token;
       if (token) {
@@ -43,6 +44,7 @@ const UserProvider = ({ children }) => {
   };
   const signup = async (email, password) => {
     try {
+      // const response = await axios.post('https://shoperstop.onrender.com/auth/signup', { email, password });
       const response = await axios.post('http://localhost:5555/auth/signup', { email, password });
       console.log('Signup successful:', response.data.message);
       toast.success('Signup successful!');

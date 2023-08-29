@@ -12,6 +12,7 @@ router.post('/signup', async (req, res) => {
     try {
       const { email, password } = req.body;
       console.log('Received request body:', req.body);
+
       // Check if user already exists
       const existingUser = await User.findOne({ email });
       if (existingUser) {
@@ -25,7 +26,7 @@ router.post('/signup', async (req, res) => {
       console.log('User saved successfully');
       res.status(201).json({ message: 'User registered successfully' });
     } catch (error) {
-      res.status(500).json({ message: 'An error occurred' });
+      res.status(500).json({ message: 'An error occurred ' });
     }
   });
   
